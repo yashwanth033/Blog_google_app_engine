@@ -1,15 +1,12 @@
 {% extends "index.html" %}
 {% block content %}
-<h2>Login</h2>
+<h2>Sign-up</h2>
 <form name="sentMessage" id="contactForm" method="post" novalidate>
   <div class="control-group">
     <div class="form-group floating-label-form-group controls">
       <label>Username</label>
       <input name="username" value="{{username}}" type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-      <div class="alert alert-danger fade in">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Error!</strong>{{error_username}}
-      </div>
+      <div>{{error_username}}</div>
       <p class="help-block text-danger"></p>
     </div>
   </div>
@@ -17,10 +14,7 @@
     <div class="form-group floating-label-form-group controls">
       <label>Password</label>
       <input type="password" name="password" value="" class="form-control" placeholder="Password">
-      <div class="alert alert-danger fade in">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Error!</strong>{{error_password}}
-      </div>
+      <div>{{error_password}}</div>
       <p class="help-block text-danger"></p>
     </div>
   </div>
@@ -28,10 +22,7 @@
     <div class="form-group floating-label-form-group controls">
       <label>Verify password</label>
       <input type="password" name="verify" value="" class="form-control" placeholder="Verify-Password">
-      <div class="alert alert-danger fade in">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Error!</strong>{{error_verify}}
-      </div>
+      <div>{{error_verify}}</div>
       <p class="help-block text-danger"></p>
     </div>
   </div>
@@ -40,10 +31,7 @@
       <label>E-mail</label>
       <input type="text" name="email" value="{{email}}" type="email" class="form-control" placeholder="Email Address" id="email"
         required data-validation-required-message="Please enter your email address.">
-      <div class="alert alert-danger fade in">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Error!</strong>{{error_email}}
-      </div>
+      <div>{{error_email}}</div>
       <p class="help-block text-danger"></p>
     </div>
   </div>
