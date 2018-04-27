@@ -225,7 +225,7 @@ class Signup(BlogHandler):
             have_error = True
 
         if not valid_password(self.password):
-            params['error_password'] = "That wasn't a valid password."
+            params['error_password'] = "That wasn't a valid password, length should be in range of 4-20."
             have_error = True
         elif self.password != self.verify:
             params['error_verify'] = "Your passwords didn't match."
